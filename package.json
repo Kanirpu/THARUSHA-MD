@@ -1,0 +1,27 @@
+{
+  "name": "THARUSHA-MD",
+  "version": "1.0.0",
+  "description": "what the fuck😂",
+  "main": "index.js",
+  "scripts": {
+    "start": "pm2 start index.js --deep-monitoring --attach --name THARUSHA-MD",
+    "stop": "pm2 stop THARUSHA-MD",
+    "restart": "pm2 restart THARUSHA-MD"
+  },
+  "dependencies": {
+   "@whiskeysockets/baileys": "6.7.16",
+    "@adiwajshing/keyed-db": "^0.2.4",
+    "pino": "9.6.0",
+    "pm2": "^6.0.5",
+    "util": "^0.12.5",
+    "express": "5.1.0",
+    "axios": "^1.8.4",
+    "file_size_url": "^1.0.6",
+    "fs-extra": "^11.1.0",
+    "path": "^0.12.7",
+    "node-fetch": "^3.3.2",
+    "megajs": "^1.3.7",
+    "vm": "^0.1.0",
+    "qrcode-terminal": "^0.12.0"
+  }
+}
