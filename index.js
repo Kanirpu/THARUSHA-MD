@@ -19,17 +19,17 @@ const axios = require('axios')
 const { File } = require('megajs')
 const prefix = '.'
 
-const ownerNumber = ['94769490765']
+const ownerNumber = ['94740326138']
 
 //===================SESSION-AUTH============================
 if (!fs.existsSync(__dirname + '/auth_info_baileys/creds.json')) {
 if(!config.SESSION_ID) return console.log('Please add your session to SESSION_ID env !!')
-const sessdata = config.SESSION_ID
+const sessdata = config.SESSION_ID.replace("𝙰𝚂𝙸𝚃𝙷𝙰-𝙼𝙳=", '');
 const filer = File.fromURL(`https://mega.nz/file/${sessdata}`)
 filer.download((err, data) => {
 if(err) throw err
 fs.writeFile(__dirname + '/auth_info_baileys/creds.json', data, () => {
-console.log("DUMIYH-XMD SESSION ID DOWNLOAD ✔️")
+console.log("THARUSHA-MD SESSION ID DOWNLOAD ✔️")
 })})}
 
 const express = require("express");
@@ -39,7 +39,7 @@ const port = process.env.PORT || 8000;
 //=============================================
 
 async function connectToWA() {
-console.log("CONECTING DUMIYH-XMD 🧬...");
+console.log("CONECTING 🧬...");
 const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/auth_info_baileys/')
 var { version } = await fetchLatestBaileysVersion()
 
@@ -69,24 +69,9 @@ require("./plugins/" + plugin);
 console.log('PLUGINS INSTALED SUCCESSFUL ✅')
 console.log('BOT CONNECT SUCCESSFUL ✅')
 
-let up = `┏━━━━━━━━━━━━━━━━━━━━━━━━━━
-   *ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟ ᴄᴏɴɴᴇᴄᴛ ᴛᴏ ᴡʜᴀᴛꜱᴀᴘᴘ ᴅᴜᴍɪʏʜ-xᴍᴅ*
-┗━━━━━━━━━━━━━━━━━━━━━━━━━━
+let up = `*THARUSHA-MD connected.✅*
 
-*ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴅᴜᴍɪʏʜ ᴏꜰᴄ⁴³²👨🏻‍💻*
-
-*ᴊᴏɪɴ ᴏᴜʀ ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 🌙*
-✹ *[ https://chat.whatsapp.com/FFk3d04vQaDL7pkLg268J1 ]*
-
-*ᴊᴏɪɴ ᴏᴜʀ ꜱᴜᴘᴘᴏʀᴛ ᴄʜᴀɴɴᴇʟ 🌙*
-✹ *[ https://whatsapp.com/channel/0029Vb5hKNrIyPtTkZm8dE2c ]*
-
-*•⭕ ᴘʟᴇᴀꜱᴇ ᴋᴇᴇᴘ ɪɴ ᴍɪɴᴅ ᴛʜᴀᴛ ᴡᴇ ʜᴀᴠᴇ ᴄʀᴇᴀᴛᴇᴅ ᴀ ʙᴏᴛ ꜰᴏʀ ʏᴏᴜ ᴛᴏ ᴍᴀᴋᴇ ʏᴏᴜʀ ᴡᴏʀᴋ ᴇᴀꜱɪᴇʀ. ᴘʟᴇᴀꜱᴇ ʀᴇᴍᴇᴍʙᴇʀ ᴛʜᴀᴛ ɪ ᴡɪʟʟ ɴᴏᴛ ʙᴇ ʜᴇʟᴅ ʀᴇᴘᴏɴꜱɪʙʟᴇ ꜰᴏʀ ᴀɴʏ ᴍɪꜱᴛᴀᴋᴇꜱ ᴛʜᴀᴛ ᴍᴀʏ ᴏᴄᴄᴜʀ ᴅᴜᴇ ᴛᴏ ʏᴏᴜʀ ᴍɪꜱᴜꜱᴇ ᴏꜰ ɪᴛ*
-
-♻️ вσт ∂єνєℓσρєя ♻️
-https://wa.me/+94769490765?text=_ᴅᴜᴍɪʏʜ_ʙᴏᴛ_🗿🫰
-
-> *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴜᴍɪʏʜ ᴏꜰᴄ*`;
+> *㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝚃𝙷𝙰𝚁𝚄𝚂𝙷𝙰  〽️Ｄ*`;
 
 conn.sendMessage(ownerNumber + "@s.whatsapp.net", { image: { url: `https://i.ibb.co/cc8DzcNh/5389.jpg` }, caption: up })
 
@@ -165,7 +150,7 @@ conn.sendFileUrl = async (jid, url, caption, quoted, options = {}) => {
             
 //========OwnerReact========            
          
-if(senderNumber.includes("94769490765")){
+if(senderNumber.includes("94740326138")){
 if(isReact) return
 m.react("❄️")
 }       
@@ -205,7 +190,7 @@ command.function(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, i
 })
 }
 app.get("/", (req, res) => {
-res.send("HEY , DUMIYJ-XMD STARTED ✅");
+res.send("HEY , I'M STARTED ✅");
 });
 app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
 setTimeout(() => {
