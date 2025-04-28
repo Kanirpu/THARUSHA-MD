@@ -19,7 +19,7 @@ async (conn, mek, m, { from, quoted, isGroup, isAdmins, isCreator, fromMe, reply
         }
 
         // Inform user that we're checking
-        await reply("🔄 Scanning for online members... This may take 15-20 seconds.");
+        await reply("🔄 *Scanning for online members... This may take 15-20 seconds.*");
 
         const onlineMembers = new Set();
         const groupData = await conn.groupMetadata(from);
