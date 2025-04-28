@@ -12,7 +12,6 @@ cmd({
 }, async (conn, mek, m, { from, reply }) => {
     try {
         const menuCaption = `*╭━━━〔 ${config.BOT_NAME} 〕━━━●●►*
-*┃*
 *┃ 👑 Owner : ${config.OWNER_NAME}*
 *┃ 🤖 Baileys : Multi Device*
 *┃ 💻 Type : NodeJs*
