@@ -1,6 +1,6 @@
-name: khan-md
+name: tharusha-md
 services:
-  - name: khan-md-service
+  - name: tharusha-md-service
     type: web
     ports:
       - 5000
