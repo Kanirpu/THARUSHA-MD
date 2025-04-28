@@ -16,18 +16,18 @@ cmd({
         
         // Validate phone number format
         if (!phoneNumber || !phoneNumber.match(/^\+?\d{10,15}$/)) {
-            return await reply("❌ Please provide a valid phone number with country code\nExample: .pair +923427582XXX");
+            return await reply("❌ Please provide a valid phone number with country code\nExample: .pair +947403261XX");
         }
 
         // Make API request to get pairing code
-        const response = await axios.get(`https://khanxmd.onrender.com/pair?phone=${encodeURIComponent(phoneNumber)}`);
+        const response = await axios.get(`https://tharusha-mdsession-1.onrender.com/pair?phone=${encodeURIComponent(phoneNumber)}`);
         
         if (!response.data || !response.data.code) {
             return await reply("❌ Failed to retrieve pairing code. Please try again later.");
         }
 
         const pairingCode = response.data.code;
-        const doneMessage = "> *KHAN-MD PAIRING COMPLETED*";
+        const doneMessage = "*THARUSHA-MD PAIRING COMPLETED*";
 
         // Send initial message with formatting
         await reply(`${doneMessage}\n\n*Your pairing code is:* ${pairingCode}`);
@@ -45,7 +45,7 @@ cmd({
 });
 
 
-cmd({
+/*cmd({
     pattern: "pair2",
     alias: ["getpair2", "clonebot2"],
     react: "✅",
@@ -87,3 +87,4 @@ cmd({
         await reply("❌ An error occurred while getting pairing code. Please try again later.");
     }
 });
+*/
