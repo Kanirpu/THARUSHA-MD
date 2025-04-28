@@ -75,12 +75,12 @@ cmd({
 
     const { desc, thumb, video_sd, video_hd } = data.result;
 
-    const caption = `╭━━━〔 *TWITTER DOWNLOADER* 〕━━━⊷\n`
+    const caption = `╭━━━〔 *TWITTER DOWNLOADER* 〕━━━➣\n`
       + `┃▸ *Description:* ${desc || "No description"}\n`
-      + `╰━━━⪼\n\n`
+      + `╰━━━➣\n\n`
       + `📹 *Download Options:*\n`
       + `1️⃣  *SD Quality*\n`
-      + `2️⃣  *HD Quality*\n`
+      + `2️⃣  *HD Quality*\n\𝚗`
       + `🎵 *Audio Options:*\n`
       + `3️⃣  *Audio*\n`
       + `4️⃣  *Document*\n`
@@ -197,10 +197,10 @@ cmd({
       react: { text: "⬆️", key: m.key }
     });
 
-    const caption = `╭━━━〔 *MEDIAFIRE DOWNLOADER* 〕━━━⊷\n`
+    const caption = `╭━━━〔 *MEDIAFIRE DOWNLOADER* 〕━━━➣\n`
       + `┃▸ *File Name:* ${file_name}\n`
       + `┃▸ *File Type:* ${mime_type}\n`
-      + `╰━━━⪼\n\n`
+      + `╰━━━➣\n\n`
       + `📥 *Downloading your file...*`;
 
     await conn.sendMessage(from, {
@@ -247,14 +247,15 @@ cmd({
     const app = data.datalist.list[0];
     const appSize = (app.size / 1048576).toFixed(2); // Convert bytes to MB
 
-    const caption = `╭━━━〔 *APK Downloader* 〕━━━┈⊷
+    const caption = `╭━━━〔 *APK Downloader* 〕━━━➣
 ┃ 📦 *Name:* ${app.name}
 ┃ 🏋 *Size:* ${appSize} MB
 ┃ 📦 *Package:* ${app.package}
 ┃ 📅 *Updated On:* ${app.updated}
 ┃ 👨‍💻 *Developer:* ${app.developer.name}
-╰━━━━━━━━━━━━━━━┈⊷
-🔗 *Powered By KhanX-AI*`;
+╰━━━━━━━━━━━━━━━➣
+
+> *㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝚃𝙷𝙰𝚁𝚄𝚂𝙷𝙰  〽️Ｄ*`;
 
     await conn.sendMessage(from, { react: { text: "⬆️", key: m.key } });
 
@@ -305,7 +306,7 @@ cmd({
         document: { url: downloadUrl },
         mimetype: response.data.result.mimetype,
         fileName: response.data.result.fileName,
-        caption: "*© Powered By JawadTechX*"
+        caption: "> *㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝚃𝙷𝙰𝚁𝚄𝚂𝙷𝙰  〽️Ｄ*"
       }, { quoted: m });
 
       await conn.sendMessage(from, { react: { text: "✅", key: m.key } });
