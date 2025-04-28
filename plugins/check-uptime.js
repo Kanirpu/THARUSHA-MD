@@ -16,13 +16,13 @@ async (conn, mek, m, { from, reply }) => {
         const startTime = new Date(Date.now() - process.uptime() * 1000);
         
         // Style 1: Classic Box
-        const style1 = `╭───『 UPTIME 』───⳹
+        const style1 = `╭───『 UPTIME 』───➣
 │
 │ ⏱️ ${uptime}
 │
 │ 🚀 Started: ${startTime.toLocaleString()}
 │
-╰────────────────⳹
+╰────────────────➣
 ${config.DESCRIPTION}`;
 
         // Style 2: Minimalist
@@ -119,8 +119,8 @@ ${config.DESCRIPTION}`;
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363354023106228@newsletter',
-                    newsletterName: config.OWNER_NAME || 'JawadTechX',
+                    newsletterJid: '120363411607943828@newsletter',
+                    newsletterName: '𝚃𝙷𝙰𝚁𝚄𝚂𝙷𝙰 〽️𝙳',
                     serverMessageId: 143
                 }
             }
