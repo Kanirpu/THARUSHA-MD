@@ -21,7 +21,7 @@ cmd({
         // Get unique categories count
         const categories = [...new Set(Object.values(commands).map(c => c.category))]
 
-        let menuText = `╭───『 *${config.BOT_NAME} COMMAND LIST* 』───⳹
+        let menuText = `╭───『 *${config.BOT_NAME} COMMAND LIST* 』───➣
 │
 │ *🛠️ BOT INFORMATION*
 │ • 🤖 Bot Name: ${config.BOT_NAME}
@@ -36,7 +36,7 @@ cmd({
 │ • 🔄 Total Aliases: ${aliasCount}
 │ • 🗂️ Categories: ${categories.length}
 │
-╰────────────────⳹\n`
+╰────────────────➣\n`
 
         // Organize commands by category
         const categorized = {}
@@ -46,7 +46,7 @@ cmd({
 
         // Generate menu for each category
         for (const [category, cmds] of Object.entries(categorized)) {
-            menuText += `╭───『 *${category.toUpperCase()}* 』───⳹
+            menuText += `╭───『 *${category.toUpperCase()}* 』───➣
 │ • 📂 Commands: ${cmds.length}
 │ • 🔄 Aliases: ${cmds.reduce((a, c) => a + (c.alias ? c.alias.length : 0), 0)}
 │
@@ -64,7 +64,7 @@ cmd({
                 menuText += `│\n`
             })
             
-            menuText += `╰────────────────⳹\n`
+            menuText += `╰────────────────➣\n`
         }
 
         menuText += `\n📝 *Note*: Use ${config.PREFIX}help <command> for detailed help\n`
@@ -73,7 +73,7 @@ cmd({
         await conn.sendMessage(
             from,
             {
-                image: { url: config.MENU_IMAGE_URL || 'https://files.catbox.moe/7zfdcq.jpg' },
+                image: { url: config.MENU_IMAGE_URL ,
                 caption: menuText,
                 contextInfo: {
                     mentionedJid: [m.sender],
