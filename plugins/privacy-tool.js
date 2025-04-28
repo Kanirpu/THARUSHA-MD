@@ -15,8 +15,7 @@ cmd({
 }, 
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
-        let privacyMenu = `╭━━〔 *Privacy Settings* 〕━━┈⊷
-┃◈╭─────────────·๏
+        let privacyMenu = `╭━━〔 *Privacy Settings* 〕━━➣
 ┃◈┃• blocklist - View blocked users
 ┃◈┃• getbio - Get user's bio
 ┃◈┃• setppall - Set profile pic privacy
@@ -34,21 +33,20 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ┃◈┃• contact_blacklist - Contacts except blocked
 ┃◈┃• none - Nobody
 ┃◈┃• match_last_seen - Match last seen
-┃◈└───────────┈⊷
-╰──────────────┈⊷
+╰──────────────➣
 *Note:* Most commands are owner-only`;
 
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://files.catbox.moe/7zfdcq.jpg` }, // Replace with privacy-themed image if available
+                image: { url: config.MENU_IMAGE_URL }, // Replace with privacy-themed image if available
                 caption: privacyMenu,
                 contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363354023106228@newsletter',
+                        newsletterJid: '120363411607943828@newsletter',
                         newsletterName: "Privacy Settings",
                         serverMessageId: 143
                     }
@@ -281,7 +279,7 @@ async (conn, mek, m, { from, l, quoted, body, isCmd, command, args, q, isGroup, 
         if (!duka) return reply('🚫 *Failed to fetch privacy settings*');
         
         let puka = `
-╭───「 𝙿𝚁𝙸𝚅𝙰𝙲𝚈  」───◆  
+╭───「 𝙿𝚁𝙸𝚅𝙰𝙲𝚈  」───➣ 
 │ ∘ 𝚁𝚎𝚊𝚍 𝚁𝚎𝚌𝚎𝚒𝚙𝚝: ${duka.readreceipts}  
 │ ∘ 𝙿𝚛𝚘𝚏𝚒𝚕𝚎 𝙿𝚒𝚌𝚝𝚞𝚛𝚎: ${duka.profile}  
 │ ∘ 𝚂𝚝𝚊𝚝𝚞𝚜: ${duka.status}  
@@ -289,7 +287,7 @@ async (conn, mek, m, { from, l, quoted, body, isCmd, command, args, q, isGroup, 
 │ ∘ 𝙻𝚊𝚜𝚝 𝚂𝚎𝚎𝚗: ${duka.last}  
 │ ∘ 𝙶𝚛𝚘𝚞𝚙 𝙿𝚛𝚒𝚟𝚊𝚌𝚢: ${duka.groupadd}  
 │ ∘ 𝙲𝚊𝚕𝚕 𝙿𝚛𝚒𝚟𝚊𝚌𝚢: ${duka.calladd}  
-╰────────────────────`;
+╰────────────────────➣`;
         await conn.sendMessage(from, { text: puka }, { quoted: mek });
     } catch (e) {
         reply('🚫 *An error occurred!*\n\n' + e);
