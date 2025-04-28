@@ -14,7 +14,7 @@ cmd({
 async (conn, mek, m, { from, sender, reply }) => {
     try {
         const status = `
-╭───〔 *🤖 ${config.BOT_NAME} STATUS* 〕───◉
+╭───〔 *🤖 ${config.BOT_NAME} STATUS* 〕───➣
 │✨ *Bot is Active & Online!*
 │
 │🧠 *Owner:* ${config.OWNER_NAME}
@@ -24,7 +24,7 @@ async (conn, mek, m, { from, sender, reply }) => {
 │💾 *RAM:* ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${(os.totalmem() / 1024 / 1024).toFixed(2)}MB
 │🖥️ *Host:* ${os.hostname()}
 │⌛ *Uptime:* ${runtime(process.uptime())}
-╰────────────────────◉
+╰────────────────────➣
 > ${config.DESCRIPTION}`;
 
         await conn.sendMessage(from, {
@@ -35,8 +35,8 @@ async (conn, mek, m, { from, sender, reply }) => {
                 forwardingScore: 1000,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363354023106228@newsletter',
-                    newsletterName: 'JawadTechX',
+                    newsletterJid: '120363411607943828@newsletter',
+                    newsletterName: '𝚃𝙷𝙰𝚁𝚄𝚂𝙷𝙰 〽️𝙳',
                     serverMessageId: 143
                 }
             }
