@@ -16,22 +16,22 @@ async (conn, mek, m, { from, reply }) => {
         const startTime = new Date(Date.now() - process.uptime() * 1000);
         
         // Style 1: Classic Box
-        const style1 = `╭───『 UPTIME 』──➣
+        const style1 = `╭───『 UPTIME 』───⳹
 │
 │ ⏱️ ${uptime}
 │
 │ 🚀 Started: ${startTime.toLocaleString()}
 │
-╰────────────────➣
+╰────────────────⳹
 ${config.DESCRIPTION}`;
 
         // Style 2: Minimalist
-        const style2 = `•——[ UPTIME ]——➣
+        const style2 = `•——[ UPTIME ]——•
   │
   ├─ ⏳ ${uptime}
   ├─ 🕒 Since: ${startTime.toLocaleTimeString()}
   │
-  •——[ ${config.BOT_NAME} ]——➣`;
+  •——[ ${config.BOT_NAME} ]——•`;
 
         // Style 3: Fancy Borders
         const style3 = `▄▀▄▀▄ BOT UPTIME ▄▀▄▀▄
@@ -99,7 +99,7 @@ ${config.DESCRIPTION}`;
 
         // Style 10: Professional
         const style10 = `┏━━━━━━━━━━━━━━━━━━┓
-┃  UPTIME ANALYS  ┃
+┃  UPTIME ANALYSIS  ┃
 ┗━━━━━━━━━━━━━━━━━━┛
 
 ◈ Duration: ${uptime}
@@ -119,8 +119,8 @@ ${config.DESCRIPTION}`;
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363411607943828@newsletter',
-                    newsletterName: '𝚃𝙷𝙰𝚁𝚄𝚂𝙷𝙰 〽️𝙳',
+                    newsletterJid: '120363354023106228@newsletter',
+                    newsletterName: config.OWNER_NAME || 'JawadTechX',
                     serverMessageId: 143
                 }
             }
