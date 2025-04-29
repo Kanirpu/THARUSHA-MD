@@ -11,16 +11,15 @@ cmd({
     filename: __filename
 }, async (conn, mek, m, { from, reply }) => {
     try {
-        const menuCaption = `*╭─「 ꜱᴛᴀᴛᴜꜱ ᴅᴇᴛᴀɪʟꜱ 」*
-*│*👤 *User*: ${pushname}
-*│*✒️ *Prefix*: [${config.PREFIX}]
-*│*🧬 *Version*: 1.0.0
-*│*🎈 *Platform*: github
-*│*📳 *Mode:* [${config.MODE}]
-*│*📡 *Host*: ${os.hostname()}
-*│*📟 *Uptime*: ${runtime(process.uptime())}
-*│*📂 *Memory*: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${(os.totalmem() / 1024 / 1024).toFixed(2)}MB
-*╰──────────●●►*
+        const menuCaption = `*╭━━━〔 ${config.BOT_NAME} 〕━━━●●►*
+*┃ 👑 Owner : ${config.OWNER_NAME}*
+*┃ 🤖 Baileys : Multi Device*
+*┃ 💻 Type : NodeJs*
+*┃ 🚀 Platform : Heroku*
+*┃ ⚙️ Mode : [${config.MODE}]*
+*┃ 🔣 Prefix : [${config.PREFIX}]*
+*┃ 🏷️ Version : 1.0.0 Bᴇᴛᴀ*
+*╰━━━━━━━━━━━━━━●●►*
 
 *🔢 ʀᴇᴘʟʏ ᴛʜᴇ ɴᴜᴍʙᴇʀ ʙᴇʟᴏᴡ*🗿
 
