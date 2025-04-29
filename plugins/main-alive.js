@@ -16,14 +16,14 @@ async (conn, mek, m, { from, sender, reply }) => {
         const status = `
 
         ╭─「 ꜱᴛᴀᴛᴜꜱ ᴅᴇᴛᴀɪʟꜱ 」*
-*│*👤 *`User`*: ${pushname}
-*│*✒️ *`Prefix`*: [${config.PREFIX}]
-*│*🧬 *`Version`*: 1.0.0
-*│*🎈 *`Platform`*: github
+*│*👤 *User*: ${pushname}
+*│*✒️ *Prefix*: [${config.PREFIX}]
+*│*🧬 *Version*: 1.0.0
+*│*🎈 *Platform*: github
 *│*📳 *Mode:* [${config.MODE}]
-*│*📡 *`Host`*: ${os.hostname()}
-*│*📟 *`Uptime`*: ${runtime(process.uptime())}
-*│*📂 *`Memory`*: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${(os.totalmem() / 1024 / 1024).toFixed(2)}MB
+*│*📡 *Host*: ${os.hostname()}
+*│*📟 *Uptime*: ${runtime(process.uptime())}
+*│*📂 *Memory*: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${(os.totalmem() / 1024 / 1024).toFixed(2)}MB
 *╰──────────●●►*
 
 > ${config.DESCRIPTION}`;
