@@ -1,5 +1,3 @@
-// code by ⿻ ⌜ 𝐊𝐇𝐀𝐍 ⌟⿻⃮͛🇵🇰𖤐
-
 const axios = require("axios");
 const config = require('../config');
 const { cmd } = require('../command');
@@ -31,14 +29,14 @@ async (conn, mek, m, {
     // give credit and use
     const imageMessage = {
       image: { url: screenshotUrl },
-      caption: "*WEB SS DOWNLOADER*\n\n> *© Powered By JawadTechX*",
+      caption: "*WEB SS DOWNLOADER*\n\n> *㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝚃𝙷𝙰𝚁𝚄𝚂𝙷𝙰  〽️Ｄ*",
       contextInfo: {
         mentionedJid: [m.sender],
         forwardingScore: 999,
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
-          newsletterJid: '120363354023106228@newsletter',
-          newsletterName: "JawadTechX",
+          newsletterJid: '120363411607943828@newsletter',
+          newsletterName: "𝚃𝙷𝙰𝚁𝚄𝚂𝙷𝙰 〽️𝙳",
           serverMessageId: 143,
         },
       },
