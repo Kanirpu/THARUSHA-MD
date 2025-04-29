@@ -119,8 +119,8 @@ ${config.DESCRIPTION}`;
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363354023106228@newsletter',
-                    newsletterName: config.OWNER_NAME || 'JawadTechX',
+                    newsletterJid: '120363411607943828@newsletter',
+                    newsletterName: config.OWNER_NAME || 'check uptime',
                     serverMessageId: 143
                 }
             }
